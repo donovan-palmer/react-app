@@ -2,10 +2,11 @@ import React from "react"
 
 function Joke(props) {
     return (
-        <ul className="joke">
-            <li style={{display: !props.joke.question && "none"}}>Question: {props.joke.question}</li>
-            <li>Answer: {props.joke.punchLine}</li>
-        </ul>
+        <div>
+            <h3 style={{display: props.question ? "block" : "none"}}>Question: {props.question}</h3>
+            <h3 style={{color: !props.question && "#888888"}}>Answer: {props.punchLine}</h3>
+            <hr/>
+        </div>
     )
 }
 
