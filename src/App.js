@@ -3,6 +3,7 @@ import Footer from "./components/Footer"
 import Header from "./components/Header"
 import Content from "./components/Content"
 import ContactCard from "./components/ContactCard"
+import Joke from "./components/Joke"
 import Greeting from "./utils/Greeting"
 
 //Components should be capital letter Camel Case standard. 
@@ -14,6 +15,30 @@ function App() {
             <Header />
             <Greeting />
             <Content />
+            <div className="jokes">
+                <Joke
+                    joke={{punchLine: "It's hard to explain puns to kleptomaniacs because they always take things literally."}}
+                />
+                <Joke
+                    joke={{question: "What's the best thing about Switzerland?", punchLine: "I don't know, but the flag is a big plus!"}}
+                />
+
+                <Joke
+                    joke={{question: "Did you hear about the mathematician who's afraid of negative numbers?", punchLine: "He'' stop at nothing to avoid them!"}}
+                />
+
+                <Joke
+                    joke={{question: "Hear about the new restaurant called Karma?", punchLine: "There's no menu: You get what you deserve"}}
+                />
+
+                <Joke
+                    joke={{question: "Did you hear about the actor who fell through the floorboards?", punchLine: "He was just going through a stage."}}
+                />
+
+                <Joke
+                    joke={{question: "Did you hear about the claustrophobic astronaut?", punchLine: "He just needed a little space."}}
+                />
+            </div>
             <div className="contacts">
                 <ContactCard 
                     contact={{name: "Mr. Whiskerson", imgUrl: "http://placekitten.com/300/200", phone: "(212) 555-1234", email: "mr.whiskaz@catnap.meow"}}
