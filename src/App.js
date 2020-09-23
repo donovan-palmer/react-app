@@ -4,24 +4,36 @@ import Header from "./components/Header"
 import Content from "./components/Content"
 import ContactCard from "./components/ContactCard"
 import Joke from "./components/Joke"
-import Greeting from "./utils/Greeting"
 import jokesData from "./utils/jokesData"
+import Product from "./components/Product"
+import productsData from "./utils/vschoolProducts"
+import Greeting from "./utils/Greeting"
+
+
 
 //Components should be capital letter Camel Case standard. 
 // Components can have child components, with HTML elements being the 
 //base of the DOM model
 function App() {
     const jokeComponents = jokesData.map(joke => <Joke key={joke.id} question={joke.question} punchLine={joke.punchLine} />)
+    const productComponents = productsData.map(item => <Product key={item.id} product={item}/>)
     
     return (
         <div>
             <Header />
             <Greeting />
             <Content />
+
+            <h1>JOKES</h1>
             <div> 
                 {jokeComponents}  
             </div>
-            
+
+            <h1>PRODUCTS</h1>
+            <div>
+                {productComponents}
+            </div>
+
             <div className="contacts">
                 <ContactCard 
                     contact={{name: "Mr. Whiskerson", imgUrl: "http://placekitten.com/300/200", phone: "(212) 555-1234", email: "mr.whiskaz@catnap.meow"}}
