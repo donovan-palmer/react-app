@@ -1,8 +1,7 @@
 import React from "react"
-import Footer from "./Footer"
-import Header from "./Header"
-import Content from "./Content"
-import Nav from "./Nav"
+import Footer from "./components/Footer"
+import Header from "./components/Header"
+import Content from "./components/Content"
 
 
 //Components should be capital letter Camel Case standard. 
@@ -12,7 +11,6 @@ function App() {
     return (
         <div>
             <Header />
-            <Nav />
             <Content />
             <Footer />
         </div>
